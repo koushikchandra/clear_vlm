@@ -1,4 +1,4 @@
-# CLEAR-VLM — Faithfulness & Calibration Audit of Open Medical VLMs
+# CLEAR: Calibrating Medical Vision-Language Reasoning Under Image Corruption
 
 Inference-only evaluation of open medical vision-language models (VLMs) on
 medical VQA. For each `(image, question)` the model is queried under several
