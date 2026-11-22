@@ -1,0 +1,16 @@
+[job] model=Qwen/Qwen2.5-VL-3B-Instruct dataset=vqarad n=20 tag=smoke_qwen3b on nova21-gpu-5
+NVIDIA A100-SXM4-80GB, 81920 MiB
+[load] model=Qwen/Qwen2.5-VL-3B-Instruct dtype=bfloat16
+[ERROR] `loss` is part of Qwen2_5_VLCausalLMOutputWithPast.__init__'s signature, but not documented. Make sure to add it to the docstring of the function in /lustre/hdd/LAS/weile-lab/howlader/miniconda3/lib/python3.13/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py.
+[ERROR] `logits` is part of Qwen2_5_VLCausalLMOutputWithPast.__init__'s signature, but not documented. Make sure to add it to the docstring of the function in /lustre/hdd/LAS/weile-lab/howlader/miniconda3/lib/python3.13/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py.
+[done] wrote 20 records x 3 conditions -> results/smoke_qwen3b.jsonl
+
+== results/smoke_qwen3b.jsonl  (n=20) ==
+cond         acc   mconf    ECE   hiErr  consist
+------------------------------------------------
+intact     0.450   0.650  0.200   0.000      nan
+blank      0.500   0.638  0.271   0.250    0.300
+mismatch   0.500   0.665  0.231   0.000    0.550
+
+[wrote] results/smoke_qwen3b_metrics.json
+[job] done -> results/smoke_qwen3b.jsonl

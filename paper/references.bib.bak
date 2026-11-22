@@ -1,0 +1,206 @@
+% =====================================================================
+% References for Med-Reasoner @ NeurIPS 2026 paper
+% Authors/titles/venues verified 2026-09-03 against arXiv / publisher pages.
+% Preference: cite the peer-reviewed venue when one exists; arXiv otherwise.
+% Grouped: (A) hallucination benchmarks, (B) detection, (C) CoT faithfulness,
+% (D) robustness/survey, (E) calibration, plus models and datasets.
+% !! corgi and steplevel_grounding_faithfulness are WITHDRAWN preprints -- see notes.
+% =====================================================================
+
+% ---------- (A) Hallucination benchmarks in medical VQA ----------
+
+@inproceedings{halt_medvqa,
+  title     = {Hallucination Benchmark in Medical Visual Question Answering},
+  author    = {Wu, Jinge and Kim, Yunsoo and Wu, Honghan},
+  booktitle = {International Conference on Learning Representations (ICLR),
+               Tiny Papers Track},
+  year      = {2024},
+  note      = {HALT-MedVQA; code: https://github.com/knowlab/halt-medvqa},
+  url       = {https://arxiv.org/abs/2401.05827}
+}
+
+@article{medvh,
+  title   = {MedVH: Toward Systematic Evaluation of Hallucination for Large
+             Vision Language Models in the Medical Context},
+  author  = {Gu, Zishan and Chen, Jiayuan and Liu, Fenglin and Yin, Changchang
+             and Zhang, Ping},
+  journal = {Advanced Intelligent Systems},
+  volume  = {8},
+  year    = {2026},
+  note    = {arXiv:2407.02730; ``Wrongful Image'' task},
+  url     = {https://advanced.onlinelibrary.wiley.com/doi/10.1002/aisy.202500255}
+}
+
+% ---------- (B) Hallucination detection methods (medical VLM) ----------
+
+@inproceedings{vase_miccai2025,
+  title     = {Vision-Amplified Semantic Entropy for Hallucination Detection
+               in Medical Visual Question Answering},
+  author    = {Liao, Zehui and Hu, Shishuai and Zou, Ke and Fu, Huazhu and
+               Zhen, Liangli and Xia, Yong},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+  year      = {2025},
+  url       = {https://papers.miccai.org/miccai-2025/1005-Paper0083.html}
+}
+
+@article{univrse,
+  title   = {UniVRSE: Unified Vision-conditioned Response Semantic Entropy for
+             Hallucination Detection in Medical Vision-Language Models},
+  author  = {Liao, Zehui and others},
+  journal = {arXiv preprint arXiv:2503.20504},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2503.20504}
+}
+
+% ---------- (C) Chain-of-thought reasoning faithfulness ----------
+
+@article{eval_reasoning_faithfulness_medvlm,
+  title   = {Evaluating Reasoning Faithfulness in Medical Vision-Language Models
+             using Multimodal Perturbations},
+  author  = {Moll, Johannes and Graf, Markus and Lemke, Tristan and
+             Lenhart, Nicolas and Truhn, Daniel and Delbrouck, Jean-Benoit and
+             Pan, Jiazhen and Rueckert, Daniel and Adams, Lisa C. and
+             Bressem, Keno K.},
+  journal = {arXiv preprint arXiv:2510.11196},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2510.11196}
+}
+
+@article{schain,
+  title   = {S-Chain: Structured Visual Chain-of-Thought For Medicine},
+  author  = {Le-Duc, Khai and others},
+  journal = {arXiv preprint arXiv:2510.22728},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2510.22728}
+}
+
+% ---------- (D) Robustness & survey ----------
+
+@article{vlm_robustness_artifacts,
+  title   = {Understanding the robustness of vision-language models to
+             medical image artefacts},
+  author  = {Cheng, Zijie and Ong, Ariel Yuhan and Wagner, Siegfried K. and
+             others},
+  journal = {npj Digital Medicine},
+  year    = {2025},
+  url     = {https://www.nature.com/articles/s41746-025-02108-w}
+}
+
+@article{vlm_in_medicine_survey,
+  title   = {Vision Language Models in Medicine},
+  author  = {Kalpelbe, Beria Chingnabe and Adaambiik, Angel Gabriel and
+             Peng, Wei},
+  journal = {arXiv preprint arXiv:2503.01863},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2503.01863}
+}
+
+% ---------- (E) Confidence calibration: foundations ----------
+
+@inproceedings{guo_calibration,
+  title     = {On Calibration of Modern Neural Networks},
+  author    = {Guo, Chuan and Pleiss, Geoff and Sun, Yu and
+               Weinberger, Kilian Q.},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2017}
+}
+
+@article{lin_verbalized,
+  title   = {Teaching Models to Express Their Uncertainty in Words},
+  author  = {Lin, Stephanie and Hilton, Jacob and Evans, Owain},
+  journal = {Transactions on Machine Learning Research (TMLR)},
+  year    = {2022}
+}
+
+@inproceedings{kuhn_semantic,
+  title     = {Semantic Uncertainty: Linguistic Invariances for Uncertainty
+               Estimation in Natural Language Generation},
+  author    = {Kuhn, Lorenz and Gal, Yarin and Farquhar, Sebastian},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023}
+}
+
+% ---------- (E) Confidence calibration in medical VLMs ----------
+
+@article{calib_mllm_miccai,
+  title   = {Confidence Calibration for Multimodal LLMs: An Empirical Study
+             through Medical VQA},
+  author  = {Du, Yuetian and others},
+  journal = {arXiv preprint arXiv:2606.19950},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2606.19950}
+}
+
+@article{verbalized_uncertainty,
+  title   = {Just How Sure Are You? Improving Verbalized Uncertainty
+             Calibration in Medical VQA},
+  author  = {Senoglu, Eren and Toschi, Federico and Brunello, Nicolo and
+             Sassella, Andrea and Carman, Mark James},
+  journal = {arXiv preprint arXiv:2606.27023},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2606.27023}
+}
+
+@article{vlm_reliability_corruption,
+  title   = {Assessing VLM Reliability for Medical Image Quality Evaluation
+             Under Corruption and Bias},
+  author  = {Ouaari, Sofiane and Vorwalder, Kevin and Pfeifer, Nico},
+  journal = {arXiv preprint arXiv:2607.01973},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2607.01973}
+}
+
+% ---------- Models ----------
+
+@article{qwen25vl,
+  title   = {Qwen2.5-VL Technical Report},
+  author  = {{Qwen Team}},
+  journal = {arXiv preprint arXiv:2502.13923},
+  year    = {2025}
+}
+
+@misc{llava16,
+  title  = {LLaVA-NeXT: Improved Reasoning, OCR, and World Knowledge},
+  author = {Liu, Haotian and Li, Chunyuan and Li, Yuheng and Lee, Yong Jae},
+  year   = {2024},
+  note   = {LLaVA-1.6; model llava-hf/llava-v1.6-mistral-7b-hf},
+  url    = {https://llava-vl.github.io/blog/2024-01-30-llava-next/}
+}
+
+@article{medgemma,
+  title   = {MedGemma Technical Report},
+  author  = {Sellergren, Andrew and others},
+  journal = {arXiv preprint arXiv:2507.05201},
+  year    = {2025},
+  note    = {model google/medgemma-4b-it}
+}
+
+% ---------- Datasets ----------
+
+@article{vqarad,
+  title   = {A dataset of clinically generated visual questions and answers
+             about radiology images},
+  author  = {Lau, Jason J. and Gayen, Soumya and Ben Abacha, Asma and
+             Demner-Fushman, Dina},
+  journal = {Scientific Data},
+  volume  = {5},
+  year    = {2018},
+  note    = {VQA-RAD}
+}
+
+@article{pathvqa,
+  title   = {PathVQA: 30000+ Questions for Medical Visual Question Answering},
+  author  = {He, Xuehai and Zhang, Yichen and Mou, Luntian and Xing, Eric and
+             Xie, Pengtao},
+  journal = {arXiv preprint arXiv:2003.10286},
+  year    = {2020}
+}
+
+@inproceedings{slake,
+  title     = {SLAKE: A Semantically-Labeled Knowledge-Enhanced Dataset for
+               Medical Visual Question Answering},
+  author    = {Liu, Bo and Zhan, Li-Ming and Xu, Li and Ma, Lin and Yang, Yan
+               and Wu, Xiao-Ming},
+  booktitle = {IEEE International Symposium on Biomedical Imaging (ISBI)},
+  year      = {2021}
+}

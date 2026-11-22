@@ -1,0 +1,32 @@
+[job] model=llava-hf/llava-v1.6-mistral-7b-hf dataset=vqarad n=-1 tag=llava16_verb_vqarad on nova22-amp-6
+NVIDIA A100-SXM4-80GB, 81920 MiB
+[load] model=llava-hf/llava-v1.6-mistral-7b-hf dtype=bfloat16
+  [25/451] q='is there evidence of small bowel obstruc' intact='No, there is no evid'
+  [50/451] q='where is the tip of the line?' intact='The tip of the line '
+  [75/451] q='are the vascular markings increased?' intact='No, the vascular mar'
+  [100/451] q='does the lesion appear to be wedge-shape' intact='Yes, the lesion appe'
+  [125/451] q='is the cardiac silhouette less than half' intact='Yes'
+  [150/451] q='the lesion is isointense to what object ' intact='The lesion is isoint'
+  [175/451] q='is the trachea midline?' intact='Yes, the trachea is '
+  [200/451] q='does this image show a pneumothorax?' intact='No, the image does n'
+  [225/451] q='is the outline of visceral pleura visibl' intact='Yes'
+  [250/451] q='is the mass well circumscribed and homog' intact='No, the mass is not '
+  [275/451] q='term for the enhancement of the luminal ' intact='Enhancement of the l'
+  [300/451] q='how large is the mass?' intact='The mass appears to '
+  [325/451] q='is this a normal image?' intact='No, this is not a no'
+  [350/451] q='is there a hypodensity located in the li' intact='Yes, there is a hypo'
+  [375/451] q='the image probably had what incidental f' intact='The image appears to'
+  [400/451] q='what abnormalities are in the lung apice' intact='There are no visible'
+  [425/451] q='is there a pneumothorax present?' intact='No, there is no pneu'
+  [450/451] q='is a pneumothorax present in the left ap' intact='No, there is no pneu'
+[done] wrote 451 records x 3 conditions -> results/llava16_verb_vqarad.jsonl
+
+== results/llava16_verb_vqarad.jsonl  (n=451) ==
+cond         acc   mconf    ECE   hiErr  consist
+------------------------------------------------
+intact     0.384   0.768  0.384   0.455      nan
+blank      0.304   0.753  0.450   0.554    0.171
+mismatch   0.310   0.769  0.458   0.568    0.308
+
+[wrote] results/llava16_verb_vqarad_metrics.json
+[job] done -> results/llava16_verb_vqarad.jsonl

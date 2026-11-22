@@ -1,0 +1,18 @@
+# Model weights & HF datasets cache (do not commit — tens of GB)
+.hf_cache/
+
+# Local Claude Code config (may contain tokens/secrets)
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# LaTeX build artifacts (scoped to paper/ so slurm logs/*.out are kept)
+paper/**/*.aux
+paper/**/*.log
+paper/**/*.out
+paper/**/*.bbl
+paper/**/*.blg
+paper/**/*.synctex.gz

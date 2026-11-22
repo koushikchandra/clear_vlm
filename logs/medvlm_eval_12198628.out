@@ -1,0 +1,32 @@
+[job] model=google/medgemma-4b-it dataset=vqarad n=-1 tag=medgemma_verb_vqarad on nova21-gpu-4
+NVIDIA A100-SXM4-80GB, 81920 MiB
+[load] model=google/medgemma-4b-it dtype=bfloat16
+  [25/451] q='is there evidence of small bowel obstruc' intact='Yes'
+  [50/451] q='where is the tip of the line?' intact='The tip of the line '
+  [75/451] q='are the vascular markings increased?' intact='Yes'
+  [100/451] q='does the lesion appear to be wedge-shape' intact='Yes'
+  [125/451] q='is the cardiac silhouette less than half' intact='Yes'
+  [150/451] q='the lesion is isointense to what object ' intact='Cerebrospinal fluid '
+  [175/451] q='is the trachea midline?' intact='Yes'
+  [200/451] q='does this image show a pneumothorax?' intact='No'
+  [225/451] q='is the outline of visceral pleura visibl' intact='Yes'
+  [250/451] q='is the mass well circumscribed and homog' intact='Yes'
+  [275/451] q='term for the enhancement of the luminal ' intact='Enhancement'
+  [300/451] q='how large is the mass?' intact='The mass appears to '
+  [325/451] q='is this a normal image?' intact='No'
+  [350/451] q='is there a hypodensity located in the li' intact='Yes'
+  [375/451] q='the image probably had what incidental f' intact='A lesion in the brai'
+  [400/451] q='what abnormalities are in the lung apice' intact='There are opacities/'
+  [425/451] q='is there a pneumothorax present?' intact='No'
+  [450/451] q='is a pneumothorax present in the left ap' intact='No'
+[done] wrote 451 records x 3 conditions -> results/medgemma_verb_vqarad.jsonl
+
+== results/medgemma_verb_vqarad.jsonl  (n=451) ==
+cond         acc   mconf    ECE   hiErr  consist
+------------------------------------------------
+intact     0.608   0.925  0.317   0.391      nan
+blank      0.319   0.899  0.580   0.662    0.317
+mismatch   0.399   0.923  0.524   0.601    0.443
+
+[wrote] results/medgemma_verb_vqarad_metrics.json
+[job] done -> results/medgemma_verb_vqarad.jsonl

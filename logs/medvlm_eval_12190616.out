@@ -1,0 +1,32 @@
+[job] model=Qwen/Qwen2.5-VL-7B-Instruct dataset=vqarad n=-1 tag=qwen7b_sev_vqarad on nova21-gpu-11
+NVIDIA A100-SXM4-80GB, 81920 MiB
+[load] model=Qwen/Qwen2.5-VL-7B-Instruct dtype=bfloat16
+[ERROR] `loss` is part of Qwen2_5_VLCausalLMOutputWithPast.__init__'s signature, but not documented. Make sure to add it to the docstring of the function in /lustre/hdd/LAS/weile-lab/howlader/miniconda3/lib/python3.13/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py.
+[ERROR] `logits` is part of Qwen2_5_VLCausalLMOutputWithPast.__init__'s signature, but not documented. Make sure to add it to the docstring of the function in /lustre/hdd/LAS/weile-lab/howlader/miniconda3/lib/python3.13/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py.
+  [25/451] q='is there evidence of small bowel obstruc' intact='yes'
+  [50/451] q='where is the tip of the line?' intact='Right atrium.'
+  [75/451] q='are the vascular markings increased?' intact='no'
+  [100/451] q='does the lesion appear to be wedge-shape' intact='no'
+  [125/451] q='is the cardiac silhouette less than half' intact='yes'
+  [150/451] q='the lesion is isointense to what object ' intact='CSF.'
+  [175/451] q='is the trachea midline?' intact='Yes'
+  [200/451] q='does this image show a pneumothorax?' intact='no'
+  [225/451] q='is the outline of visceral pleura visibl' intact='no'
+  [250/451] q='is the mass well circumscribed and homog' intact='No.'
+  [275/451] q='term for the enhancement of the luminal ' intact='Necrosis.'
+  [300/451] q='how large is the mass?' intact='4.5 CM.'
+  [325/451] q='is this a normal image?' intact='No.'
+  [350/451] q='is there a hypodensity located in the li' intact='yes'
+  [375/451] q='the image probably had what incidental f' intact='Subarachnoid hemorrh'
+  [400/451] q='what abnormalities are in the lung apice' intact='Nodular densities.'
+  [425/451] q='is there a pneumothorax present?' intact='no'
+  [450/451] q='is a pneumothorax present in the left ap' intact='no'
+[done] wrote 451 records x 7 conditions -> results/qwen7b_sev_vqarad.jsonl
+
+== results/qwen7b_sev_vqarad.jsonl  (n=451) ==
+cond         acc   mconf    ECE   hiErr  consist
+------------------------------------------------
+intact     0.554   0.783  0.229   0.308      nan
+
+[wrote] results/qwen7b_sev_vqarad_metrics.json
+[job] done -> results/qwen7b_sev_vqarad.jsonl

@@ -1,0 +1,34 @@
+[job] model=Qwen/Qwen2.5-VL-7B-Instruct dataset=vqarad n=-1 tag=qwen7b_verb_vqarad on nova21-gpu-2
+NVIDIA A100-SXM4-80GB, 81920 MiB
+[load] model=Qwen/Qwen2.5-VL-7B-Instruct dtype=bfloat16
+[ERROR] `loss` is part of Qwen2_5_VLCausalLMOutputWithPast.__init__'s signature, but not documented. Make sure to add it to the docstring of the function in /lustre/hdd/LAS/weile-lab/howlader/miniconda3/lib/python3.13/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py.
+[ERROR] `logits` is part of Qwen2_5_VLCausalLMOutputWithPast.__init__'s signature, but not documented. Make sure to add it to the docstring of the function in /lustre/hdd/LAS/weile-lab/howlader/miniconda3/lib/python3.13/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py.
+  [25/451] q='is there evidence of small bowel obstruc' intact='No'
+  [50/451] q='where is the tip of the line?' intact='The tip of the line '
+  [75/451] q='are the vascular markings increased?' intact='No'
+  [100/451] q='does the lesion appear to be wedge-shape' intact='No'
+  [125/451] q='is the cardiac silhouette less than half' intact='Yes'
+  [150/451] q='the lesion is isointense to what object ' intact='Cerebrospinal fluid'
+  [175/451] q='is the trachea midline?' intact='Yes'
+  [200/451] q='does this image show a pneumothorax?' intact='No'
+  [225/451] q='is the outline of visceral pleura visibl' intact='Yes'
+  [250/451] q='is the mass well circumscribed and homog' intact='No'
+  [275/451] q='term for the enhancement of the luminal ' intact='Mucosal enhancement'
+  [300/451] q='how large is the mass?' intact='The mass appears to '
+  [325/451] q='is this a normal image?' intact='No'
+  [350/451] q='is there a hypodensity located in the li' intact='Yes'
+  [375/451] q='the image probably had what incidental f' intact='The image shows a br'
+  [400/451] q='what abnormalities are in the lung apice' intact='Hazy opacities'
+  [425/451] q='is there a pneumothorax present?' intact='No'
+  [450/451] q='is a pneumothorax present in the left ap' intact='No'
+[done] wrote 451 records x 3 conditions -> results/qwen7b_verb_vqarad.jsonl
+
+== results/qwen7b_verb_vqarad.jsonl  (n=451) ==
+cond         acc   mconf    ECE   hiErr  consist
+------------------------------------------------
+intact     0.534   0.868  0.333   0.420      nan
+blank      0.370   0.845  0.474   0.561    0.459
+mismatch   0.399   0.870  0.471   0.553    0.539
+
+[wrote] results/qwen7b_verb_vqarad_metrics.json
+[job] done -> results/qwen7b_verb_vqarad.jsonl
