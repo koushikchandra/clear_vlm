@@ -166,4 +166,10 @@ python code/eval/severity_curve.py \
 - Result tags follow `<model>_<dataset>` with suffixes `_sev` (severity),
   `_verb` (verbalized confidence), and `_strata` (by question type).
 
+## Experiment index
+
+See **[EXPERIMENTS.md](EXPERIMENTS.md)** for a full log of every run — each Slurm
+job, its model/dataset/config, links to its `logs/` output, the result files it
+produced, and headline accuracy/ECE per image condition.
+
 See `WORKSHOP_PLAN.md` and `paper/` for the accompanying short paper.
